@@ -1,0 +1,119 @@
+{
+  "header": "",
+  "footer": "",
+  "inputs": [
+    {
+      "name": "cloudstack_api_key",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "cloudstack_api_url",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "cloudstack_secret_key",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "keypair",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "kubernetes_version",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "network_id",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "service_offering",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "size",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "zone",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    }
+  ],
+  "modules": [],
+  "outputs": [
+    {
+      "name": "description",
+      "description": null
+    },
+    {
+      "name": "endpoint",
+      "description": null
+    },
+    {
+      "name": "kubernetes_cluster_name",
+      "description": null
+    },
+    {
+      "name": "kubernetesversionid",
+      "description": null
+    }
+  ],
+  "providers": [
+    {
+      "name": "cloudstack",
+      "alias": null,
+      "version": "0.4.1"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "cloudstack",
+      "version": "0.4.1"
+    }
+  ],
+  "resources": [
+    {
+      "type": "kubernetes_cluster",
+      "name": "cluster1",
+      "provider": "cloudstack",
+      "source": "kiranchavalacloud/cloudstack",
+      "mode": "managed",
+      "version": "0.4.1",
+      "description": null
+    }
+  ]
+}

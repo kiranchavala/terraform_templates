@@ -1,0 +1,52 @@
+{
+    "header": "",
+    "footer": "",
+    "inputs": [
+      {
+        "name": "project_id",
+        "type": "string",
+        "description": "The project id in  google cloud",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "region",
+        "type": "string",
+        "description": "The region in google cloud",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "gke_num_nodes",
+        "type": "any",
+        "description": "Enter the number of nodes you want to provision",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "gke_cluster_name",
+        "type": "any",
+        "description": "Enter the k8s cluster name",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "vpc_name",
+        "type": "any",
+        "description": "Enter the vpc name",
+        "default": null,
+        "required": true
+      }
+
+      
+  
+  
+        
+    ],
+    "modules": [],
+    "outputs": [],
+    "providers": [],
+    "requirements": [],
+    "resources": []
+  }
+  

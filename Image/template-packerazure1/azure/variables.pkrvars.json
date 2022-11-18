@@ -1,0 +1,14 @@
+{
+    "subscription_id" : "",
+    "client_id" : "",
+    "client_secret" : "",
+    "tenant_id" : "",
+    "managed_image_resource_group_name"    : "sample-rg",
+    "managed_image_name"    : "myPackerImage",
+    "os_type" : "Linux",
+    "image_publisher"                  : "Canonical",
+    "image_offer"       : "UbuntuServer",
+    "image_sku" : "16.04-LTS",
+    "location" : "East US",
+    "vm_size"      : "Standard_DS2_v2"
+}

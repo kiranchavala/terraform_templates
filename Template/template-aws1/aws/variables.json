@@ -1,0 +1,243 @@
+{
+  "header": "",
+  "footer": "",
+  "inputs": [
+    {
+      "name": "access_key",
+      "type": "any",
+      "description": "access key",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "instance_ami",
+      "type": "string",
+      "description": null,
+      "default": "ami-00399ec92321828f5",
+      "required": false
+    },
+    {
+      "name": "instance_az",
+      "type": "string",
+      "description": null,
+      "default": "us-east-2a",
+      "required": false
+    },
+    {
+      "name": "instance_key_name",
+      "type": "string",
+      "description": null,
+      "default": "main1-key",
+      "required": false
+    },
+    {
+      "name": "instance_tagname",
+      "type": "string",
+      "description": null,
+      "default": "web-server",
+      "required": false
+    },
+    {
+      "name": "instance_type",
+      "type": "string",
+      "description": null,
+      "default": "t2.micro",
+      "required": false
+    },
+    {
+      "name": "nic_privateips",
+      "type": "string",
+      "description": null,
+      "default": "10.0.1.50",
+      "required": false
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "description": null,
+      "default": "us-east-2",
+      "required": false
+    },
+    {
+      "name": "rt-tagName",
+      "type": "string",
+      "description": null,
+      "default": "Prod",
+      "required": false
+    },
+    {
+      "name": "secret_key",
+      "type": "any",
+      "description": "secret key",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "sg_description",
+      "type": "string",
+      "description": null,
+      "default": "Allow Web inbound traffic",
+      "required": false
+    },
+    {
+      "name": "sg_name",
+      "type": "string",
+      "description": null,
+      "default": "allow_web_traffic",
+      "required": false
+    },
+    {
+      "name": "sg_tagName",
+      "type": "string",
+      "description": null,
+      "default": "allow_web",
+      "required": false
+    },
+    {
+      "name": "subnet1_az",
+      "type": "string",
+      "description": null,
+      "default": "us-east-2a",
+      "required": false
+    },
+    {
+      "name": "subnet_prefix",
+      "type": "any",
+      "description": "cidr block for the subnet",
+      "default": null,
+      "required": false
+    },
+    {
+      "name": "vpc_cidr",
+      "type": "string",
+      "description": null,
+      "default": "10.0.0.0/16",
+      "required": false
+    },
+    {
+      "name": "vpc_tagName",
+      "type": "string",
+      "description": null,
+      "default": "production",
+      "required": false
+    }
+  ],
+  "modules": [],
+  "outputs": [
+    {
+      "name": "instance_state",
+      "description": null
+    },
+    {
+      "name": "instanceid",
+      "description": null
+    },
+    {
+      "name": "instancetype",
+      "description": null
+    },
+    {
+      "name": "networkinterfaceid",
+      "description": null
+    },
+    {
+      "name": "subnet1arn",
+      "description": null
+    },
+    {
+      "name": "subnet1name",
+      "description": null
+    },
+    {
+      "name": "vpcid",
+      "description": null
+    },
+    {
+      "name": "vpcname",
+      "description": null
+    },
+    {
+      "name": "websecuritygrouparn",
+      "description": null
+    },
+    {
+      "name": "volumeid",
+      "description": null
+    }
+
+  ],
+  "providers": [
+    {
+      "name": "aws",
+      "alias": null,
+      "version": "3.70.0"
+    }
+  ],
+  "requirements": [],
+  "resources": [
+    {
+      "type": "instance",
+      "name": "web-server-instance",
+      "provider": "aws",
+      "source": "hashicorp/aws",
+      "mode": "managed",
+      "version": "latest"
+    },
+    {
+      "type": "internet_gateway",
+      "name": "gw",
+      "provider": "aws",
+      "source": "hashicorp/aws",
+      "mode": "managed",
+      "version": "latest"
+    },
+    {
+      "type": "network_interface",
+      "name": "web-server-nic",
+      "provider": "aws",
+      "source": "hashicorp/aws",
+      "mode": "managed",
+      "version": "latest"
+    },
+    {
+      "type": "route_table",
+      "name": "prod-route-table",
+      "provider": "aws",
+      "source": "hashicorp/aws",
+      "mode": "managed",
+      "version": "latest"
+    },
+    {
+      "type": "route_table_association",
+      "name": "a",
+      "provider": "aws",
+      "source": "hashicorp/aws",
+      "mode": "managed",
+      "version": "latest"
+    },
+    {
+      "type": "security_group",
+      "name": "allow_web",
+      "provider": "aws",
+      "source": "hashicorp/aws",
+      "mode": "managed",
+      "version": "latest"
+    },
+    {
+      "type": "subnet",
+      "name": "subnet-1",
+      "provider": "aws",
+      "source": "hashicorp/aws",
+      "mode": "managed",
+      "version": "latest"
+    },
+    {
+      "type": "vpc",
+      "name": "prod-vpc",
+      "provider": "aws",
+      "source": "hashicorp/aws",
+      "mode": "managed",
+      "version": "latest"
+    }
+  ]
+}

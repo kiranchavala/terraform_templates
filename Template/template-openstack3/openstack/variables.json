@@ -1,0 +1,84 @@
+{
+  "header": "",
+  "footer": "",
+  "inputs": [
+    {
+      "name": "client_certificate",
+      "type": "any",
+      "description": "paste the client.pem in base64 encoded format",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "client_key",
+      "type": "any",
+      "description": "paste the client_key.pem in base64 encoded format",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "cluster_ca_certificate",
+      "type": "any",
+      "description": "paste the cluster.pem in base64 encoded format",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "host",
+      "type": "any",
+      "description": "paste the kubernetes server master ip",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "yaml_body",
+      "type": "any",
+      "description": "name of the kubernetes cluster",
+      "default": null,
+      "required": true
+    }
+  ],
+  "modules": [],
+  "outputs": [
+    {
+      "name": "api_version",
+      "description": null
+    },
+    {
+      "name": "kind",
+      "description": null
+    },
+    {
+      "name": "name",
+      "description": null
+    },
+    {
+      "name": "yaml_body",
+      "description": null
+    }
+  ],
+  "providers": [
+    {
+      "name": "kubectl",
+      "alias": null,
+      "version": "\u003e= 1.14.0"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "kubectl",
+      "version": "\u003e= 1.14.0"
+    }
+  ],
+  "resources": [
+    {
+      "type": "manifest",
+      "name": "test2",
+      "provider": "kubectl",
+      "source": "gavinbunney/kubectl",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    }
+  ]
+}

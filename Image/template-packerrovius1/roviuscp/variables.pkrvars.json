@@ -1,0 +1,18 @@
+{
+    "cloudstack_api_url"    : "http://10.105.127.60:8080/client/api",
+    "cloudstack_api_key"    : "T8c2FClzKWTJ_9L73PZHnZ_24BdFnbWbmyt0nG-9HDAKrI-l39ZZx2VV3MvXjC3up3QBvLOpqGjdBg-_YasMWw",
+    "cloudstack_secret_key" : "Fzh0X8Iy_It4K3ViOTS33DZGsQqEDq7P5QWDbZp8vNGY9YEEMMskm_JS-IHWCVw8RGbDOTVogtpJtCG4l5KP3w",
+    "zone"                  : "7d91de73-b637-4800-a160-21fe221fa10f",
+    "network"       : "056ed1fe-ba99-49d0-b483-ccca72c3beca",
+    "disk_offering" : "d50f9c8c-841a-4f36-b368-9e9fa5e762d2",
+    "service_offering" : "da930db5-5d79-4ef9-a54e-17ce802e820a",
+    "template_name"      : "CentOS 7 by Packer",
+    "template_display_text"         : "CentOS 7 by Packer",
+    "template_os"      : "48be744a-17d2-11ed-880a-1e00d500003c",
+    "template_password_enabled"       : false,
+    "template_scalable"      : true,
+    "template_featured"             : true,
+    "ssh_username"              : "root",
+    "ssh_password"              : "password",
+    "source_template"                 : "51e018c9-17d2-11ed-880a-1e00d500003c"
+}

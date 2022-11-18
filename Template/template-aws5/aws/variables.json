@@ -1,0 +1,136 @@
+{
+  "header": "",
+  "footer": "",
+  "inputs": [
+    {
+      "name": "access_key",
+      "type": "any",
+      "description": "access key",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "aws_region",
+      "type": "string",
+      "description": "aws region",
+      "default": "us-east-2",
+      "required": false
+    },
+    {
+      "name": "cluster_name",
+      "type": "any",
+      "description": "Name of the kubernetes cluster",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "container_name",
+      "type": "any",
+      "description": "Please provide the image name",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "container_port",
+      "type": "any",
+      "description": "Please provide the container port",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "image_name",
+      "type": "any",
+      "description": "Please provide the image name",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "replicas",
+      "type": "any",
+      "description": "Please provide the no of replicas",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "secret_key",
+      "type": "any",
+      "description": "secret key",
+      "default": null,
+      "required": true
+    }
+  ],
+  "modules": [],
+  "outputs": [
+    {
+      "name": "api_version",
+      "description": null
+    },
+    {
+      "name": "kind",
+      "description": null
+    },
+    {
+      "name": "name",
+      "description": null
+    },
+    {
+      "name": "yaml_body",
+      "description": null
+    }
+  ],
+  "providers": [
+    {
+      "name": "aws",
+      "alias": null,
+      "version": "\u003e= 3.20.0"
+    },
+    {
+      "name": "kubectl",
+      "alias": null,
+      "version": "\u003e= 1.14.0"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "terraform",
+      "version": "\u003e= 0.14"
+    },
+    {
+      "name": "aws",
+      "version": "\u003e= 3.20.0"
+    },
+    {
+      "name": "kubectl",
+      "version": "\u003e= 1.14.0"
+    }
+  ],
+  "resources": [
+    {
+      "type": "manifest",
+      "name": "test2",
+      "provider": "kubectl",
+      "source": "gavinbunney/kubectl",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    },
+    {
+      "type": "eks_cluster",
+      "name": "example",
+      "provider": "aws",
+      "source": "hashicorp/aws",
+      "mode": "data",
+      "version": "latest",
+      "description": null
+    },
+    {
+      "type": "eks_cluster_auth",
+      "name": "example",
+      "provider": "aws",
+      "source": "hashicorp/aws",
+      "mode": "data",
+      "version": "latest",
+      "description": null
+    }
+  ]
+}

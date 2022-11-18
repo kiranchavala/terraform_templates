@@ -1,0 +1,117 @@
+{
+    "header": "",
+    "footer": "",
+    "inputs": [
+      {
+        "name": "access_key",
+        "type": "any",
+        "description": "access key",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "instance_ami",
+        "type": "string",
+        "description": null,
+        "default": "ami-0851b76e8b1bce90b",
+        "required": false
+      },
+      {
+        "name": "instance_az",
+        "type": "string",
+        "description": null,
+        "default": "ap-south-1b",
+        "required": false
+      },
+      {
+        "name": "instance_key_name",
+        "type": "string",
+        "description": null,
+        "default": "apsouth1-key",
+        "required": false
+      },
+      {
+        "name": "instance_tagname",
+        "type": "string",
+        "description": null,
+        "default": "web-server",
+        "required": false
+      },
+      {
+        "name": "instance_type",
+        "type": "string",
+        "description": null,
+        "default": "t2.micro",
+        "required": false
+      },
+      {
+        "name": "instance_user_data",
+        "type": "string",
+        "description": null,
+        "default": "#!/bin/bash\napt update -y\napt install apache2 -y\nsystemctl start apache2\napt-get update\napt-get -y install net-tools nginx\nMYIP=`ifconfig | grep -E '(inet 10)' | awk '{ print $2 }' | cut -d ':' -f 2`\necho 'Hello Team\nThis is my IP: '$MYIP \u003e /var/www/html/index.html",
+        "required": false
+      },
+      {
+        "name": "region",
+        "type": "string",
+        "description": null,
+        "default": "ap-south-1",
+        "required": false
+      },
+      {
+        "name": "secret_key",
+        "type": "any",
+        "description": "secret key",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "sg_id",
+        "type": "string",
+        "description": null,
+        "default": "sg-052944e2aa5713ed5",
+        "required": false
+      },
+      {
+        "name": "subnet_id",
+        "type": "string",
+        "description": null,
+        "default": "subnet-047ad9cad65437b5a",
+        "required": false
+      }
+    ],
+    "modules": [],
+    "outputs": [
+      {
+        "name": "instance_state",
+        "description": null
+      },
+      {
+        "name": "instanceid",
+        "description": null
+      },
+      {
+        "name": "instancetype",
+        "description": null
+      }
+    ],
+    "providers": [
+      {
+        "name": "aws",
+        "alias": null,
+        "version": "4.7.0"
+      }
+    ],
+    "requirements": [],
+    "resources": [
+      {
+        "type": "instance",
+        "name": "web-server-instance",
+        "provider": "aws",
+        "source": "hashicorp/aws",
+        "mode": "managed",
+        "version": "latest",
+        "description": null
+      }
+    ]
+  }

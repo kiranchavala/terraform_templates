@@ -1,0 +1,9 @@
+variable "cloudstack_api_url" {}
+variable "cloudstack_api_key" {}
+variable "cloudstack_secret_key" {}
+variable "zone" {}
+variable "instance_template" {}
+variable "instance_network" {}
+variable "instance_service_offering" {}
+variable "instance_name" {}
+variable "user_data" {}

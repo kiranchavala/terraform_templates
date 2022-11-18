@@ -1,0 +1,151 @@
+{
+    "header": "",
+    "footer": "",
+    "inputs": [
+      {
+        "name": "auth_provider_x509_cert_url",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "auth_uri",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "client_email",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "client_id",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "client_x509_cert_url",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "disk_size",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "image_description",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "image_name",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "machine_type",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "network",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "private_key",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "private_key_id",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "project_id",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "region",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "source_image",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "ssh_username",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "subnetwork",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "token_uri",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "type",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "zone",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      }
+    ],
+    "modules": [],
+    "outputs": [],
+    "providers": [],
+    "requirements": [],
+    "resources": []
+  }

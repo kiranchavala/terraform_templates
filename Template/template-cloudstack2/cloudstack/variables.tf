@@ -1,0 +1,10 @@
+variable "cloudstack_api_url" {}
+variable "cloudstack_api_key" {}
+variable "cloudstack_secret_key" {}
+variable "name" {}
+variable "zone" {}
+variable "kubernetes_version" {}
+variable "service_offering" {}
+variable "size" {}
+variable "network_id" {}
+variable "keypair" {}

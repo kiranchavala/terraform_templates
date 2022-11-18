@@ -1,0 +1,68 @@
+{
+  "header": "",
+  "footer": "",
+  "inputs": [
+    {
+      "name": "access_key",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "ami_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "instance_type",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "region",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "secret_key",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "source_ami",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "ssh_username",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "subnet_id",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    }
+  ],
+  "modules": [],
+  "outputs": [],
+  "providers": [],
+  "requirements": [],
+  "resources": []
+}
+

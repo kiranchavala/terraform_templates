@@ -1,0 +1,132 @@
+{
+  "header": "",
+  "footer": "",
+  "inputs": [
+    {
+      "name": "container_name",
+      "type": "any",
+      "description": "Please provide the container name",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "container_port",
+      "type": "any",
+      "description": "Please provide the container port",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "gke_cluster_name",
+      "type": "any",
+      "description": "name of the k8s cluster",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "host",
+      "type": "any",
+      "description": "IP of k8s master node",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "image_name",
+      "type": "any",
+      "description": "Please provide the image name",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "project_id",
+      "type": "any",
+      "description": "project id",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "region",
+      "type": "any",
+      "description": "region",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "replicas",
+      "type": "any",
+      "description": "Please provide the no of replicas",
+      "default": null,
+      "required": true
+    }
+  ],
+  "modules": [],
+  "outputs": [
+    {
+      "name": "api_version",
+      "description": null
+    },
+    {
+      "name": "kind",
+      "description": null
+    },
+    {
+      "name": "name",
+      "description": null
+    },
+    {
+      "name": "yaml_body",
+      "description": null
+    }
+  ],
+  "providers": [
+    {
+      "name": "google",
+      "alias": null,
+      "version": "4.20.0"
+    },
+    {
+      "name": "kubectl",
+      "alias": null,
+      "version": "\u003e= 1.14.0"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "google",
+      "version": "4.20.0"
+    },
+    {
+      "name": "kubectl",
+      "version": "\u003e= 1.14.0"
+    }
+  ],
+  "resources": [
+    {
+      "type": "manifest",
+      "name": "test2",
+      "provider": "kubectl",
+      "source": "gavinbunney/kubectl",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    },
+    {
+      "type": "client_config",
+      "name": "default",
+      "provider": "google",
+      "source": "hashicorp/google",
+      "mode": "data",
+      "version": "4.20.0",
+      "description": null
+    },
+    {
+      "type": "container_cluster",
+      "name": "my_cluster",
+      "provider": "google",
+      "source": "hashicorp/google",
+      "mode": "data",
+      "version": "4.20.0",
+      "description": null
+    }
+  ]
+}

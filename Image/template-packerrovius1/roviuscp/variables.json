@@ -1,0 +1,124 @@
+{
+  "header": "",
+  "footer": "",
+  "inputs": [
+    {
+      "name": "cloudstack_api_key",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "cloudstack_api_url",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "cloudstack_secret_key",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "disk_offering",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "network",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "service_offering",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "source_template",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "ssh_password",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "ssh_username",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "template_display_text",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "template_featured",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "template_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "template_os",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "template_password_enabled",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "template_scalable",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "zone",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    }
+  ],
+  "modules": [],
+  "outputs": [],
+  "providers": [],
+  "requirements": [],
+  "resources": []
+}
+

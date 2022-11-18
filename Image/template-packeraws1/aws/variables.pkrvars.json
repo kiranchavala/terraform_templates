@@ -1,0 +1,10 @@
+{
+    "access_key": "",
+    "secret_key": "",
+    "ami_name"    : "learn-packer-aws",
+    "instance_type"    : "t2.micro",
+    "region"                  : "us-east-2",
+    "ssh_username"       : "ubuntu",
+    "source_ami" : "ami-021012742ef3a32f2",
+    "subnet_id":  "subnet-0fe46b95990088768"
+}

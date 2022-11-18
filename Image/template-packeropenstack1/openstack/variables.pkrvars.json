@@ -1,0 +1,16 @@
+{
+    "user_name" : "admin",
+    "tenant_name" : "admin",
+    "domain_name" :"default",
+    "password" : "password",
+    "auth_url" : "http://10.102.192.221:5000",
+    "region" : "RegionOne",
+    "image_id":"0c59a0e0-04d1-4c69-a480-58f0c7aac3df",
+    "flavor_name":"m1.tiny",
+    "image_name":"test-image",
+    "network_id":"d4b293f5-e67c-42be-b930-c52db13aab2d",
+    "security_group_id":"cfd34897-0ba2-43c2-aebe-a43ef4d74043",
+    "floating_ip_id":"bc9cfaee-14e9-49e7-8186-f64c6cff31f4"
+
+  
+}

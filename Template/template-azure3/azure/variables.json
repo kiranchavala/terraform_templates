@@ -1,0 +1,63 @@
+{
+    "header": "",
+    "footer": "",
+    "inputs": [
+      {
+        "name": "client_id",
+        "type": "string",
+        "description": "The azure client id for the account",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "client_secret",
+        "type": "string",
+        "description": "The azure secret key for the account",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "subscription_id",
+        "type": "any",
+        "description": "Enter Subscription ID for provisioning resources in Azure",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "tenant_id",
+        "type": "any",
+        "description": "Enter Tenant ID / Directory ID of your Azure AD. Run Get-AzureSubscription to know your Tenant ID",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "location",
+        "type": "string",
+        "description": "Location for the deployment",
+        "default": "Central India",
+        "required": true
+      },
+      {
+        "name": "resource_gp_name",
+        "type": "string",
+        "description": "Resource group name",
+        "default": "tf-web-rg",
+        "required": true
+      },
+      {
+        "name": "cluster_name",
+        "type": "string",
+        "description": "k8s clustername",
+        "default": "tf-web-rg",
+        "required": true
+      }
+  
+        
+    ],
+    "modules": [],
+    "outputs": [],
+    "providers": [],
+    "requirements": [],
+    "resources": []
+  }
+  

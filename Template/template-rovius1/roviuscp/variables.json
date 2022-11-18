@@ -1,0 +1,225 @@
+{
+  "header": "",
+  "footer": "",
+  "inputs": [
+    {
+      "name": "cloudstack_api_key",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "cloudstack_api_url",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "cloudstack_secret_key",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "disk_offering",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "instance_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "instance_service_offering",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "instance_template",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "network_offering",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "subnet_cidr",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "subnet_desc",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "subnet_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "user_data",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "vpc_desc",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "vpc_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "vpc_offering",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "vpc_super_cidr",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "zone",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    }
+  ],
+  "modules": [],
+  "outputs": [
+    {
+      "name": "instanceid",
+      "description": null
+    },
+    {
+      "name": "instancename",
+      "description": null
+    },
+    {
+      "name": "networkdisplaytext",
+      "description": null
+    },
+    {
+      "name": "networkid",
+      "description": null
+    },
+    {
+      "name": "volumeid",
+      "description": null
+    },
+    {
+      "name": "vpcid",
+      "description": null
+    },
+    {
+      "name": "vpcname",
+      "description": null
+    }
+  ],
+  "providers": [
+    {
+      "name": "cloudstack",
+      "alias": null,
+      "version": "0.4.0"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "cloudstack",
+      "version": "0.4.0"
+    }
+  ],
+  "resources": [
+    {
+      "type": "disk",
+      "name": "test-disk",
+      "provider": "cloudstack",
+      "source": "cloudstack/cloudstack",
+      "mode": "managed",
+      "version": "0.4.0",
+      "description": null
+    },
+    {
+      "type": "instance",
+      "name": "subnet-1VM",
+      "provider": "cloudstack",
+      "source": "cloudstack/cloudstack",
+      "mode": "managed",
+      "version": "0.4.0",
+      "description": null
+    },
+    {
+      "type": "network",
+      "name": "subnet-1",
+      "provider": "cloudstack",
+      "source": "cloudstack/cloudstack",
+      "mode": "managed",
+      "version": "0.4.0",
+      "description": "Setup a subnet within the VPC"
+    },
+    {
+      "type": "network_acl",
+      "name": "default",
+      "provider": "cloudstack",
+      "source": "cloudstack/cloudstack",
+      "mode": "managed",
+      "version": "0.4.0",
+      "description": "Setup a default network ACL"
+    },
+    {
+      "type": "network_acl_rule",
+      "name": "default",
+      "provider": "cloudstack",
+      "source": "cloudstack/cloudstack",
+      "mode": "managed",
+      "version": "0.4.0",
+      "description": null
+    },
+    {
+      "type": "vpc",
+      "name": "vpctf1",
+      "provider": "cloudstack",
+      "source": "cloudstack/cloudstack",
+      "mode": "managed",
+      "version": "0.4.0",
+      "description": "Set up the new vpc"
+    }
+  ]
+}

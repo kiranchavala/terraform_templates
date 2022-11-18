@@ -1,0 +1,166 @@
+{
+  "header": "",
+  "footer": "",
+  "inputs": [
+    {
+      "name": "auth_url",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "cluster_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "cluster_template_id",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "domain_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "key_pair",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "master_count",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "node_count",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "password",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "region",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "tenant_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "user_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    }
+  ],
+  "modules": [],
+  "outputs": [
+    {
+      "name": "Network_of_the_cluster",
+      "description": "Network of the cluster"
+    },
+    {
+      "name": "api_address",
+      "description": "api_address"
+    },
+    {
+      "name": "ca_certificate",
+      "description": "ca_certificate"
+    },
+    {
+      "name": "client_certificate",
+      "description": "client_certificate"
+    },
+    {
+      "name": "client_key",
+      "description": "client_key"
+    },
+    {
+      "name": "cluster_id",
+      "description": "Openstack cluster ID."
+    },
+    {
+      "name": "cluster_template_id",
+      "description": "Openstack cluster ID."
+    },
+    {
+      "name": "coe_version",
+      "description": "coe version"
+    },
+    {
+      "name": "flavor_of_master_nodes",
+      "description": "flavor of master nodes"
+    },
+    {
+      "name": "flavor_of_worker_nodes",
+      "description": "flavor of worker nodes"
+    },
+    {
+      "name": "kubeconfig_host",
+      "description": "host"
+    },
+    {
+      "name": "kubeconfig_raw",
+      "description": "raw_kube_config"
+    },
+    {
+      "name": "stack_id",
+      "description": "stack_id"
+    }
+  ],
+  "providers": [
+    {
+      "name": "openstack",
+      "alias": null,
+      "version": "~\u003e 1.48.0"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "terraform",
+      "version": "\u003e= 0.14.0"
+    },
+    {
+      "name": "openstack",
+      "version": "~\u003e 1.48.0"
+    }
+  ],
+  "resources": [
+    {
+      "type": "containerinfra_cluster_v1",
+      "name": "cluster_1",
+      "provider": "openstack",
+      "source": "terraform-provider-openstack/openstack",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    }
+  ]
+}

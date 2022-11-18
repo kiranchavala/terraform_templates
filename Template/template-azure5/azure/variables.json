@@ -1,0 +1,141 @@
+{
+  "header": "",
+  "footer": "",
+  "inputs": [
+    {
+      "name": "client_id",
+      "type": "any",
+      "description": "Enter Client ID for Application created in Azure AD",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "client_secret",
+      "type": "any",
+      "description": "Enter Client secret for Application in Azure AD",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "cluster_name",
+      "type": "any",
+      "description": "Name of the kubernetes cluster",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "container_name",
+      "type": "any",
+      "description": "Please provide the container name",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "container_port",
+      "type": "any",
+      "description": "Please provide the container port",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "image_name",
+      "type": "any",
+      "description": "Please provide the image name",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "replicas",
+      "type": "any",
+      "description": "Please provide the no of replicas",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "resource_gp_name",
+      "type": "string",
+      "description": "Resource group name",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "subscription_id",
+      "type": "any",
+      "description": "Enter Subscription ID for provisioning resources in Azure",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "tenant_id",
+      "type": "any",
+      "description": "Enter Tenant ID / Directory ID of your Azure AD. Run Get-AzureSubscription to know your Tenant ID",
+      "default": null,
+      "required": true
+    }
+  ],
+  "modules": [],
+  "outputs": [
+    {
+      "name": "api_version",
+      "description": null
+    },
+    {
+      "name": "kind",
+      "description": null
+    },
+    {
+      "name": "name",
+      "description": null
+    },
+    {
+      "name": "yaml_body",
+      "description": null
+    }
+  ],
+  "providers": [
+    {
+      "name": "azurerm",
+      "alias": null,
+      "version": "3.10.0"
+    },
+    {
+      "name": "kubectl",
+      "alias": null,
+      "version": "\u003e= 1.14.0"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "terraform",
+      "version": "\u003e= 0.14"
+    },
+    {
+      "name": "azurerm",
+      "version": "3.10.0"
+    },
+    {
+      "name": "kubectl",
+      "version": "\u003e= 1.14.0"
+    }
+  ],
+  "resources": [
+    {
+      "type": "manifest",
+      "name": "test2",
+      "provider": "kubectl",
+      "source": "gavinbunney/kubectl",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    },
+    {
+      "type": "kubernetes_cluster",
+      "name": "cluster",
+      "provider": "azurerm",
+      "source": "hashicorp/azurerm",
+      "mode": "data",
+      "version": "3.10.0",
+      "description": null
+    }
+  ]
+}

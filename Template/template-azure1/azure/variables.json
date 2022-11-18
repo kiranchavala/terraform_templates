@@ -1,0 +1,176 @@
+{
+  "header": "",
+  "footer": "",
+  "inputs": [
+    {
+      "name": "client_id",
+      "type": "any",
+      "description": "Enter Client ID for Application created in Azure AD",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "client_secret",
+      "type": "any",
+      "description": "Enter Client secret for Application in Azure AD",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "instance_user_data",
+      "type": "string",
+      "description": null,
+      "default": "#!/bin/bash\napt update -y\napt install apache2 -y\nsystemctl start apache2\napt-get update\napt-get -y install net-tools nginx\necho '\u003ch1\u003eAzure Linux VM with Web Server azurerm_virtual_machine.test.name  \u003c/h1\u003e' | sudo tee /var/www/html/index.html",
+      "required": false
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "description": null,
+      "default": "eastus",
+      "required": false
+    },
+    {
+      "name": "nw_address_space",
+      "type": "string",
+      "description": null,
+      "default": "10.0.0.0/16",
+      "required": false
+    },
+    {
+      "name": "prefix",
+      "type": "string",
+      "description": null,
+      "default": "hp",
+      "required": false
+    },
+    {
+      "name": "resource_gp_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "subnet_address",
+      "type": "string",
+      "description": null,
+      "default": "10.0.2.0/24",
+      "required": false
+    },
+    {
+      "name": "subnet_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "subscription_id",
+      "type": "any",
+      "description": "Enter Subscription ID for provisioning resources in Azure",
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "tags_owner",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "tenant_id",
+      "type": "any",
+      "description": "Enter Tenant ID / Directory ID of your Azure AD. Run Get-AzureSubscription to know your Tenant ID",
+      "default": null,
+      "required": true
+    }
+  ],
+  "modules": [],
+  "outputs": [
+    {
+      "name": "instanceid",
+      "description": null
+    },
+    {
+      "name": "networkid",
+      "description": null
+    },
+    {
+      "name": "networkinterfaceid",
+      "description": null
+    },
+    {
+      "name": "networkname",
+      "description": null
+    },
+    {
+      "name": "resourcegroupid",
+      "description": null
+    },
+    {
+      "name": "subnetid",
+      "description": null
+    },
+    {
+      "name": "subnetname",
+      "description": null
+    }
+  ],
+  "providers": [
+    {
+      "name": "azurerm",
+      "alias": null,
+      "version": null
+    }
+  ],
+  "requirements": [],
+  "resources": [
+    {
+      "type": "network_interface",
+      "name": "main",
+      "provider": "azurerm",
+      "source": "hashicorp/azurerm",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    },
+    {
+      "type": "resource_group",
+      "name": "resource_gp",
+      "provider": "azurerm",
+      "source": "hashicorp/azurerm",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    },
+    {
+      "type": "subnet",
+      "name": "internal",
+      "provider": "azurerm",
+      "source": "hashicorp/azurerm",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    },
+    {
+      "type": "virtual_machine",
+      "name": "main",
+      "provider": "azurerm",
+      "source": "hashicorp/azurerm",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    },
+    {
+      "type": "virtual_network",
+      "name": "main",
+      "provider": "azurerm",
+      "source": "hashicorp/azurerm",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    }
+  ]
+}

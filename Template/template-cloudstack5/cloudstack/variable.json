@@ -1,0 +1,78 @@
+{
+    "header": "",
+    "footer": "",
+    "inputs": [
+      {
+        "name": "cloudstack_api_url",
+        "type": "string",
+        "description": "The cloudstack api url",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "cloudstack_api_key",
+        "type": "string",
+        "description": "The cloudstack api key",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "cloudstack_secret_key",
+        "type": "string",
+        "description": "The cloudstack secret key",
+        "default": "null",
+        "required": true
+      },
+      {
+        "name": "instance_name",
+        "type": "list(string)",
+        "description": "The instance names",
+        "default": "null",
+        "required": true
+      },
+      {
+        "name": "instance_service_offering",
+        "type": "string",
+        "description": "The instance service offering",
+        "default": "null",
+        "required": true
+      },
+      {
+        "name": "instance_template",
+        "type": "string",
+        "description": "The instance template",
+        "default": "null",
+        "required": true
+      },
+      {
+        "name": "zone",
+        "type": "string",
+        "description": "The zone id",
+        "default": "null",
+        "required": true
+      },
+      {
+        "name": "network_id",
+        "type": "string",
+        "description": "The network id",
+        "default": "null",
+        "required": true
+      },
+
+      {
+        "name": "instancecount",
+        "type": "number",
+        "description": "instance count",
+        "default": "null",
+        "required": true
+      }
+     
+     
+    ],
+    "modules": [],
+    "outputs": [],
+    "providers": [],
+    "requirements": [],
+    "resources": []
+  }
+  

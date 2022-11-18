@@ -1,0 +1,50 @@
+{
+    "header": "",
+    "footer": "",
+    "inputs": [
+      {
+        "name": "project_id",
+        "type": "string",
+        "description": "The project id in  google cloud",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "region",
+        "type": "string",
+        "description": "The region in google cloud",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "gke_cluster_name",
+        "type": "any",
+        "description": "Enter the k8s cluster name",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "host",
+        "type": "any",
+        "description": "Enter the ip address of k8s master",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "yaml_body",
+        "type": "any",
+        "description": "Provide the yaml content in Base64 format",
+        "default": null,
+        "required": true
+      }
+ 
+
+
+
+    ],
+    "modules": [],
+    "outputs": [],
+    "providers": [],
+    "requirements": [],
+    "resources": []
+  }

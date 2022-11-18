@@ -1,0 +1,142 @@
+{
+    "header": "",
+    "footer": "",
+    "inputs": [
+      {
+        "name": "boot_disk_image",
+        "type": "string",
+        "description": null,
+        "default": "debian-cloud/debian-10",
+        "required": false
+      },
+      {
+        "name": "client_x509_cert_url",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "instance_name",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "machine_type",
+        "type": "string",
+        "description": null,
+        "default": "f1-micro",
+        "required": false
+      },
+      {
+        "name": "network_name",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "private_key_id",
+        "type": "any",
+        "description": null,
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "region",
+        "type": "string",
+        "description": null,
+        "default": "us-central1",
+        "required": false
+      },
+      {
+        "name": "subnet_ip_cidr_range",
+        "type": "string",
+        "description": null,
+        "default": "10.2.0.0/16",
+        "required": false
+      },
+      {
+        "name": "subnet_region",
+        "type": "string",
+        "description": null,
+        "default": "us-central1",
+        "required": false
+      },
+      {
+        "name": "subnetwork_name",
+        "type": "string",
+        "description": null,
+        "default": "test-subnetwork",
+        "required": false
+      },
+      {
+        "name": "user_data",
+        "type": "string",
+        "description": null,
+        "default": "echo hi \u003e /test.txt",
+        "required": false
+      },
+      {
+        "name": "zone",
+        "type": "string",
+        "description": null,
+        "default": "us-central1-c",
+        "required": false
+      }
+    ],
+    "modules": [],
+    "outputs": [
+      {
+        "name": "instanceid",
+        "description": null
+      },
+      {
+        "name": "instancename",
+        "description": null
+      },
+      {
+        "name": "networkid",
+        "description": null
+      }
+    ],
+    "providers": [
+      {
+        "name": "google",
+        "alias": null,
+        "version": null
+      }
+    ],
+    "requirements": [],
+    "resources": [
+      {
+        "type": "compute_instance",
+        "name": "vm_instance",
+        "provider": "google",
+        "source": "hashicorp/google",
+        "mode": "managed",
+        "version": "latest",
+        "description": null
+      },
+      {
+        "type": "compute_network",
+        "name": "vpc_network",
+        "provider": "google",
+        "source": "hashicorp/google",
+        "mode": "managed",
+        "version": "latest",
+        "description": null
+      },
+      {
+        "type": "compute_subnetwork",
+        "name": "subnetwork",
+        "provider": "google",
+        "source": "hashicorp/google",
+        "mode": "managed",
+        "version": "latest",
+        "description": null
+      }
+    ]
+  }

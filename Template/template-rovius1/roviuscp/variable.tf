@@ -1,0 +1,17 @@
+variable "cloudstack_api_url" {}
+variable "cloudstack_api_key" {}
+variable "cloudstack_secret_key" {}
+variable "zone" {}
+variable "vpc_super_cidr" {}
+variable "vpc_name" {}
+variable "vpc_desc" {}
+variable "network_offering" {}
+variable "subnet_name" {}
+variable "subnet_cidr" {}
+variable "subnet_desc" {}
+variable "instance_template" {}
+variable "instance_service_offering" {}
+variable "instance_name" {}
+variable "vpc_offering" {}
+variable "user_data" {}
+variable "disk_offering" {}

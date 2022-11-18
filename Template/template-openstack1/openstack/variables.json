@@ -1,0 +1,184 @@
+{
+  "header": "",
+  "footer": "",
+  "inputs": [
+    {
+      "name": "auth_url",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "domain_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "flavor_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "image_id",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "instance_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "key_pair",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "network_id",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "password",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "region",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "security_group_id",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "tenant_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "user_data",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "user_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "volume_name",
+      "type": "any",
+      "description": null,
+      "default": null,
+      "required": true
+    },
+    {
+      "name": "volume_size",
+      "type": "number",
+      "description": null,
+      "default": null,
+      "required": true
+    }
+  ],
+  "modules": [],
+  "outputs": [
+    {
+      "name": "flavor_name",
+      "description": "flavor_name"
+    },
+    {
+      "name": "instanceid",
+      "description": "instance id"
+    },
+    {
+      "name": "ipaddress",
+      "description": "instance ip address"
+    },
+    {
+      "name": "networkid",
+      "description": "instance network uuid"
+    },
+    {
+      "name": "volume_size",
+      "description": "volume_size"
+    },
+    {
+      "name": "volumeid",
+      "description": "volume_id"
+    }
+  ],
+  "providers": [
+    {
+      "name": "openstack",
+      "alias": null,
+      "version": "~\u003e 1.48.0"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "terraform",
+      "version": "\u003e= 0.14.0"
+    },
+    {
+      "name": "openstack",
+      "version": "~\u003e 1.48.0"
+    }
+  ],
+  "resources": [
+    {
+      "type": "blockstorage_volume_v2",
+      "name": "volume_1",
+      "provider": "openstack",
+      "source": "terraform-provider-openstack/openstack",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    },
+    {
+      "type": "compute_instance_v2",
+      "name": "basic",
+      "provider": "openstack",
+      "source": "terraform-provider-openstack/openstack",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    },
+    {
+      "type": "compute_volume_attach_v2",
+      "name": "va_1",
+      "provider": "openstack",
+      "source": "terraform-provider-openstack/openstack",
+      "mode": "managed",
+      "version": "latest",
+      "description": null
+    }
+  ]
+}
