@@ -29,11 +29,20 @@ block_device {
 
 
 
-resource "openstack_blockstorage_volume_v2" "volume_1" {
+resource "openstack_blockstorage_volume_v3" "volume_1" {
   size = var.volume_size
   name = var.volume_name
 }
 resource "openstack_compute_volume_attach_v2" "va_1" {
-  volume_id   = "${openstack_blockstorage_volume_v2.volume_1.id}"
+  volume_id   = "${openstack_blockstorage_volume_v3.volume_1.id}"
+  instance_id = "${openstack_compute_instance_v2.basic.id}"
+}
+
+resource "openstack_networking_floatingip_v2" "fip_1" {
+  pool = "public"
+}
+
+resource "openstack_compute_floatingip_associate_v2" "fip_1" {
+  floating_ip = "${openstack_networking_floatingip_v2.fip_1.address}"
   instance_id = "${openstack_compute_instance_v2.basic.id}"
 }
